@@ -1,137 +1,308 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<title>Español A2: Твоя академия</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Español A2">
-<meta name="theme-color" content="#fdf8f3">
-<style>
-:root{--bg:#fdf8f3;--card:#fff;--tx:#2b2a33;--mut:#7a7885;--ac:#7c9cf5;--ok:#bfeacb;--okt:#1d6b3a;--bad:#f9c8c8;--badt:#9b2c2c;--bd:#ece4da;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1c22;--card:#292830;--tx:#f1eff5;--mut:#a29fb0;--ac:#8fabff;--ok:#24472f;--okt:#a6e8bb;--bad:#4f2a2a;--badt:#ffb4b4;--bd:#3a3844}}
-:root[data-theme="dark"]{--bg:#1d1c22;--card:#292830;--tx:#f1eff5;--mut:#a29fb0;--ac:#8fabff;--ok:#24472f;--okt:#a6e8bb;--bad:#4f2a2a;--badt:#ffb4b4;--bd:#3a3844}
-*{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font:19px/1.55 -apple-system,"SF Pro Text",system-ui,Roboto,sans-serif;-webkit-text-size-adjust:100%}
-main{max-width:640px;margin:0 auto;padding:20px 18px 110px}.tabs{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}.tabs a{flex:1;text-align:center;padding:12px 4px;color:var(--mut);text-decoration:none;font-size:15px}.tabs a.on{color:var(--ac);font-weight:700}
-h1{font-size:28px;margin:8px 0 4px}h2{font-size:22px;margin:30px 0 10px}
-.sub{color:var(--mut);font-size:16px;margin:0 0 18px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px 18px;margin:12px 0}
-a.lesson{display:block;text-decoration:none;color:inherit}
-a.lesson b{display:block;font-size:20px}
-.tag{display:inline-block;font-size:14px;padding:2px 10px;border-radius:99px;background:var(--bd);color:var(--mut);margin-top:8px}
-.tag.done{background:var(--ok);color:var(--okt)}.tag.rep{background:#fde9b8;color:#7a5200}
-.lesson b{display:block;font-size:20px}.two{display:flex;gap:10px}.two .btn{flex:1;text-align:center;text-decoration:none;padding:12px 6px}.two{flex-wrap:wrap}.two .btn{flex:1 1 40%}.two .btn.w{flex-basis:100%}#pop{position:absolute;display:none;z-index:20;background:var(--tx);color:var(--bg);padding:10px 14px;border-radius:12px;font-size:16px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.28);cursor:pointer;white-space:nowrap}#toast{position:fixed;left:50%;bottom:calc(30px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:12px;z-index:30;display:none;font-size:16px}.fc{min-height:200px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:26px;cursor:pointer}.back{display:inline-block;font-weight:600;color:var(--ac);text-decoration:none;font-size:17px;margin-bottom:6px}
-table{width:100%;border-collapse:collapse;font-size:17px;display:block;overflow-x:auto}
-td,th{border-bottom:1px solid var(--bd);padding:8px 6px;text-align:left}
-mark{background:#fde9b8;color:#2b2a33;border-radius:5px;padding:0 4px}
-.q{font-weight:600;margin-bottom:8px}
-.opts{display:flex;flex-wrap:wrap;gap:8px}
-button,select,input,textarea{font:inherit;color:var(--tx)}
-.opt,.btn{border:1.5px solid var(--bd);background:var(--card);border-radius:14px;padding:10px 16px;cursor:pointer}
-.btn{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:600;margin-top:10px}
-.opt.ok,select.ok,input.ok{background:var(--ok);border-color:var(--okt);color:var(--okt)}
-.opt.bad,select.bad,input.bad{background:var(--bad);border-color:var(--badt);color:var(--badt)}
-select{border:1.5px solid var(--bd);background:var(--card);border-radius:10px;padding:2px 6px;margin:0 2px}
-input[type=text],textarea{width:100%;border:1.5px solid var(--bd);background:var(--card);border-radius:14px;padding:10px 14px;margin-top:6px}
-.fb{font-size:16px;margin-top:8px;color:var(--mut)}
-.story{font-size:21px;line-height:2;white-space:pre-line}.r{border-radius:14px;padding:12px 14px;margin:10px 0;font-size:17px;line-height:1.6}.r1{background:#dfe8ff;color:#2b2a33}.r2{background:#ffe3d3;color:#2b2a33}.tip{background:#fde9b8;color:#2b2a33;border-radius:14px;padding:12px 14px;margin:10px 0;font-size:17px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crónicas de Eldoria — Tema 5</title>
+    <style>
+        :root {
+            --bg-color: #f4f8fb;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --primary-light: #eff6ff;
+            --success: #10b981;
+            --error: #ef4444;
+            --border-color: #cbd5e1;
+            --shadow: 0 4px 20px -2px rgba(59, 130, 246, 0.08);
+            --radius: 16px;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 650px;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            border: 1px solid rgba(59, 130, 246, 0.06);
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        .instruction {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .story-box {
+            background: var(--primary-light);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-height: 180px;
+            overflow-y: auto;
+            border: 1px solid #bfdbfe;
+        }
+
+        .question-card {
+            margin-bottom: 20px;
+        }
+
+        .question-text {
+            font-size: 16px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .options-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            background: #ffffff;
+            border: 2px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .option-btn.selected {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .option-btn.correct {
+            background: var(--success) !important;
+            color: white !important;
+            border-color: var(--success) !important;
+        }
+
+        .option-btn.incorrect {
+            background: var(--error) !important;
+            color: white !important;
+            border-color: var(--error) !important;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex: 1;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .nav-btn:disabled {
+            background: var(--border-color);
+            cursor: not-allowed;
+        }
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<main id="app"></main>
-<script type="application/json" id="lessons">
-[
-{"id":"1","text":"Elian es un elfo y vive en un <mark>barrio</mark> pequeño. En su calle hay una <mark>farmacia</mark>, un <mark>banco</mark> y un <mark>parque</mark>. El parque está <mark>cerca</mark> de su casa.","title":"En la ciudad","topic":"В городе","theory":"<p>Чтобы сказать, что где-то что-то есть, используем <mark>hay</mark>. Чтобы сказать, где находится конкретный предмет, — <mark>estar</mark>.</p><table><tr><th>Конструкция</th><th>Пример</th></tr><tr><td>Hay + un/una/unos</td><td>Hay un banco en la calle.</td></tr><tr><td>El/La + estar</td><td>El banco está cerca.</td></tr></table>","story":{"text":"En mi barrio {0} una farmacia y dos bares. La farmacia {1} al lado del parque.","gaps":[["hay","está"],["está","hay"]],"answers":[0,0]},"quiz":[{"q":"¿Dónde ___ el museo?","opts":["hay","está"],"a":1,"why":"Спрашиваем о конкретном музее — используем estar."},{"q":"En la plaza ___ una fuente.","opts":["hay","está"],"a":0,"why":"Неопределённый артикль «una» → hay."}],"survey":["¿Qué hay en tu barrio?"]},
-{"id":"4","text":"Elian es un elfo del bosque. Vive en Gijón <mark>desde</mark> 2023 y trabaja en un café <mark>desde hace</mark> dos meses. Cada día se <mark>levanta</mark> a las siete, <mark>desayuna</mark> y estudia español. Estudia <mark>desde hace</mark> un año, pero a Elian le <mark>aburren</mark> los ejercicios...","title":"El tiempo y las rutinas","topic":"Время и рутина","theory":"<p><mark>desde</mark> + момент начала (год, дата, час): <i>Vivo aquí desde 2019.</i></p><p><mark>desde hace</mark> + период времени: <i>Vivo aquí desde hace tres años.</i></p><p><mark>Hace… que</mark> + глагол: <i>Hace tres años que vivo aquí.</i></p><table><tr><th>Конструкция</th><th>После неё</th></tr><tr><td>desde</td><td>точка отсчёта (2019, las ocho, lunes)</td></tr><tr><td>desde hace</td><td>срок (un año, dos meses)</td></tr></table>","story":{"text":"Elian estudia español {0} un año. Vive en Gijón {1} 2023 y trabaja en un café {2} dos meses. Se levanta a las siete y está despierto {3} las siete y media.","gaps":[["desde hace","desde"],["desde","desde hace"],["desde hace","desde"],["desde","desde hace"]],"answers":[0,0,0,0]},"quiz":[{"q":"Estudio inglés ___ 2020.","opts":["desde","desde hace"],"a":0,"why":"2020 — это момент начала, значит desde."},{"q":"Trabajo aquí ___ cuatro meses.","opts":["desde","desde hace"],"a":1,"why":"cuatro meses — это срок, значит desde hace."},{"q":"Espero ___ las nueve.","opts":["desde","desde hace"],"a":0,"why":"las nueve — это точка во времени → desde."}],"transform":[{"prompt":"Trabajo aquí desde hace dos años.","answers":["hace dos años que trabajo aquí"],"why":"desde hace + срок → Hace + срок + que + глагол."},{"prompt":"Vivo en Madrid desde hace cinco meses.","answers":["hace cinco meses que vivo en madrid"],"why":"Порядок: Hace + срок + que + остальное предложение."},{"prompt":"Estudio español desde hace tres semanas.","answers":["hace tres semanas que estudio español"],"why":"Глагол остаётся в настоящем времени."}],"survey":["A Elian le aburren los ejercicios... ¿Y a ti?","¿Desde cuándo estudias español?"]},
-{"id":"5","words":[["делать домашнее задание","hacer los deberes","Tengo que hacer los deberes por la noche."],["читать длинные тексты","leer textos largos","No me gusta leer textos largos."],["произношение","la pronunciación","Me cuesta la pronunciación de la R."],["говорить / общаться","hablar","Prefiero hablar en clase."],["играть на уроке","jugar en clase","Es divertido jugar en clase."],["слушать аудиозаписи","escuchar las audiciones","Pasamos horas escuchando las audiciones."],["учить новые слова / лексику","aprender vocabulario","Quiero aprender vocabulario útil."],["грамматические упражнения","los ejercicios de gramática","Me aburren los ejercicios de gramática."],["писать","escribir","Intento escribir mensajes en español."],["культура","la cultura","Estudiamos la cultura de España."],["с (конкретная точка отсчёта)","desde","Estudio español desde el lunes."],["уже (в течение какого-то времени)","desde hace","Vivo aquí desde hace dos años."]],"text":"Elian espera el autobús <mark>desde hace</mark> media hora. Está en la <mark>parada</mark> <mark>desde</mark> las ocho. Vive en España <mark>desde</mark> el año pasado y aprende español <mark>desde hace</mark> seis meses.","title":"Marcadores temporales (Desde vs Desde hace)","topic":"Разница между точкой отсчёта (desde) и продолжительностью (desde hace)","theory":"<div class='r r1'><b>DESDE</b> — конкретная точка отсчёта<br>Условие: точный момент времени (дата, год, месяц, день недели, событие).<br>Вопрос: <i>¿Desde cuándo?</i> (С каких пор?)<br>• Trabajo en Madrid <mark>desde</mark> 2017.<br>• Vivo aquí <mark>desde</mark> enero.<br>• Estudio español <mark>desde</mark> el año pasado.</div><div class='r r2'><b>DESDE HACE</b> — продолжительность, отрезок времени<br>Условие: длительность периода (сколько времени прошло).<br>Вопрос: <i>¿Cuánto tiempo?</i> (Как долго?)<br>• Trabajo en Madrid <mark>desde hace</mark> seis meses.<br>• Estudio español <mark>desde hace</mark> dos años.<br>• Esperamos <mark>desde hace</mark> media hora.</div><div class='tip'>💡 <b>Быстрая шпаргалка</b><br>Дата / месяц / год (2020, lunes, enero) → <b>desde</b><br>Количество времени (3 años, 2 meses, 5 días) → <b>desde hace</b></div>","story":{"title":"Задание 1: ¡Cuánto tiempo!","autoDone":true,"text":"1. La compañera nueva se llama Marina y es suiza, pero vive en Alemania {0} el otoño.\n2. Tom tiene un nuevo trabajo {1} unos días.\n3. El hijo de Martina, Frederick, aprende español {2} tres años.\n4. Hace mucho que no veo a Silvana. No ha asistido a clase {3} diciembre.\n5. ¿Jana y John se van a vivir a Madrid? ¡Pero si aprenden español {4} solo dos meses!\n6. • ¡Los dos alumnos nuevos entienden mucho español!\n▲ Sí, es que han estudiado español {5} su primer viaje a España en 2016.","gaps":[["desde","desde hace"],["desde","desde hace"],["desde","desde hace"],["desde","desde hace"],["desde","desde hace"],["desde","desde hace"]],"answers":[0,1,1,0,1,0],"hints":["El otoño — это конкретный момент (сезон), поэтому desde.","Unos días — это количество времени, поэтому desde hace.","Tres años — это длительность, поэтому desde hace.","Diciembre — это конкретный месяц, поэтому desde.","Dos meses — это длительность, поэтому desde hace.","Su primer viaje en 2016 — событие и год, поэтому desde."]},"quiz":[],"survey":["¿Desde cuándo estudias español? ¿Y desde hace cuánto tiempo vives en tu ciudad?"]}
-]
-</script>
+
+<div class="app-container">
+    <div class="header">
+        <span id="step-indicator">Шаг 1 из 4</span>
+        <span>Crónicas de Eldoria (A2)</span>
+    </div>
+
+    <!-- Шаг 1: Упражнение 1 -->
+    <div class="step-content active" id="step-0">
+        <h2>1. ¡Cuánto tiempo!</h2>
+        <p class="instruction">Completa las frases con desde o desde hace:</p>
+        
+        <div class="question-card" data-correct="desde">
+            <div class="question-text">1. La compañera nueva se llama Marina y es suiza, pero vive en Alemania <b>[?]</b> el otoño.</div>
+            <div class="options-group">
+                <button class="option-btn" onclick="selectOption(this, 'desde')">desde</button>
+                <button class="option-btn" onclick="selectOption(this, 'desde hace')">desde hace</button>
+            </div>
+        </div>
+
+        <div class="question-card" data-correct="desde hace">
+            <div class="question-text">2. Tom tiene un nuevo trabajo <b>[?]</b> unos días.</div>
+            <div class="options-group">
+                <button class="option-btn" onclick="selectOption(this, 'desde')">desde</button>
+                <button class="option-btn" onclick="selectOption(this, 'desde hace')">desde hace</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шаг 2: Упражнение 2 -->
+    <div class="step-content" id="step-1">
+        <h2>2. Desde o desde hace</h2>
+        <p class="instruction">Elige la opción correcta:</p>
+
+        <div class="question-card" data-correct="desde hace">
+            <div class="question-text">1. Estudio español <b>[?]</b> dos años.</div>
+            <div class="options-group">
+                <button class="option-btn" onclick="selectOption(this, 'desde')">desde</button>
+                <button class="option-btn" onclick="selectOption(this, 'desde hace')">desde hace</button>
+            </div>
+        </div>
+
+        <div class="question-card" data-correct="desde">
+            <div class="question-text">2. Vivimos en esta ciudad <b>[?]</b> 2020.</div>
+            <div class="options-group">
+                <button class="option-btn" onclick="selectOption(this, 'desde')">desde</button>
+                <button class="option-btn" onclick="selectOption(this, 'desde hace')">desde hace</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шаг 3: Упражнение 3 (Трансформация) -->
+    <div class="step-content" id="step-2">
+        <h2>3. Transforma según el ejemplo</h2>
+        <p class="instruction">Ejemplo: «Pedro trabaja en esa empresa desde hace un mes» ➔ «Hace un mes que Pedro trabaja en esa empresa».</p>
+
+        <div class="question-card" data-correct="Hace tres días que María no sale de casa">
+            <div class="question-text">1. María no sale de casa desde hace tres días.</div>
+            <div class="options-group" style="flex-direction: column;">
+                <button class="option-btn" style="text-align: left;" onclick="selectOption(this, 'Hace tres días que María no sale de casa')">Hace tres días que María no sale de casa</button>
+                <button class="option-btn" style="text-align: left;" onclick="selectOption(this, 'Desde tres días María no sale de casa')">Desde tres días María no sale de casa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шаг 4: Упражнение 4 (История и выбор) -->
+    <div class="step-content" id="step-3">
+        <h2>4. Crónicas de Eldoria</h2>
+        <div class="story-box">
+            El elfo Elian es un aprendiz de mago en la Gran Academia de Eldoria...<br>
+            «Llevo en esta torre <b>[?]</b> tres meses... No les gusto <b>[?]</b> el primer lunes de magia... <b>[?]</b> la semana pasada, pruebo escribir mensajes...»
+        </div>
+        <p class="instruction">Elige la opción correcta para el texto:</p>
+
+        <div class="question-card" data-correct="desde hace">
+            <div class="question-text">1. Elian está en la torre <b>[?]</b> tres meses.</div>
+            <div class="options-group">
+                <button class="option-btn" onclick="selectOption(this, 'desde')">desde</button>
+                <button class="option-btn" onclick="selectOption(this, 'desde hace')">desde hace</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопки навигации -->
+    <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn" onclick="changeStep(-1)" disabled>Назад</button>
+        <button class="nav-btn" id="next-btn" onclick="changeStep(1)">Далее</button>
+    </div>
+</div>
+
 <script>
-const L=JSON.parse(document.getElementById('lessons').textContent);
-const app=document.getElementById('app');
-const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-const norm=s=>s.toLowerCase().replace(/[.,!?¡¿]/g,'').replace(/\s+/g,' ').trim();
-const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-const tag=id=>{const s=store.get('st'+id);return s==='done'?'<span class="tag done">Выполнено</span>':s==='rep'?'<span class="tag rep">В процессе</span>':'<span class="tag">Не начато</span>'};
-const bar=n=>`<nav class="tabs"><a href="#" class="${n==1?'on':''}">📖 Занятия и правила</a><a href="#hw" class="${n==2?'on':''}">✏️ Домашние задания</a></nav>`;
-function theory(l){app.innerHTML=`<a class="back" href="#">🏠 На главную</a><h1>Занятие №${l.id}</h1><p class="sub">${l.title} — ${l.topic}</p><h2>Теория</h2><div class="card">${l.theory}</div>`+(l.text?`<h2>Текст</h2><div class="card story">${l.text}</div>`:'')+`<a class="btn" style="display:block;text-align:center;text-decoration:none;font-size:20px;padding:16px;margin-top:24px" href="#h${l.id}">Перейти к заданию →</a>`}
-function rec(){app.querySelectorAll('.rec').forEach(b=>{let mr,ch=[];const au=b.nextElementSibling;b.onclick=async()=>{try{if(mr&&mr.state==='recording'){mr.stop();return}const st=await navigator.mediaDevices.getUserMedia({audio:true});mr=new MediaRecorder(st);ch=[];mr.ondataavailable=e=>ch.push(e.data);mr.onstop=()=>{st.getTracks().forEach(t=>t.stop());au.src=URL.createObjectURL(new Blob(ch));au.hidden=false;b.textContent='🎙 Записать заново'};mr.start();b.textContent='⏹ Стоп'}catch(e){b.textContent='Микрофон недоступен — напишите ответ текстом'}}})}
-function cards(l){
- const W=l.words,total=W.length;let q=W.map((_,i)=>i),done=0,flip=false;
- const speak=t=>{try{const u=new SpeechSynthesisUtterance(t);u.lang='es-ES';speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}};
- const back='<a class="back" href="#">🏠 На главную</a>';
- function draw(){
-  if(!q.length){app.innerHTML=back+`<h1>¡Buen trabajo!</h1><div class="card">Все слова темы освоены! 🎉</div><a class="btn" style="display:block;text-align:center;text-decoration:none;font-size:20px;padding:16px" href="${l.id==='my'?'#':'#h'+l.id}">${l.id==='my'?'На главную':'Перейти к заданию →'}</a>`;return}
-  const w=W[q[0]];
-  app.innerHTML=back+`<p class="sub">Изучено ${done} / ${total} слов</p><div class="card" style="height:8px;padding:0;overflow:hidden"><div style="height:100%;width:${done/total*100}%;background:var(--ac)"></div></div><div class="card fc" id="fc">${flip?`<div><mark>${w[1]}</mark></div><div class="sub" style="margin-top:12px">${w[2]}</div>`:`<div>${w[0]}</div><div class="sub" style="margin-top:12px">Нажми, чтобы перевернуть</div>`}</div><button class="btn" id="sp" style="width:100%">🔊 Озвучить</button>`+(flip?`<div class="two" style="margin-top:12px"><button class="btn" id="again" style="background:#e07a7a;border-color:#e07a7a">🔴 Повторить ещё</button><button class="btn" id="know" style="background:#4caf7a;border-color:#4caf7a">🟢 Я запомнил</button></div>`:`<button class="btn" id="fl" style="width:100%;background:var(--card);color:var(--tx)">Перевернуть карточку</button>`);
-  const $=id=>document.getElementById(id);
-  $('fc').onclick=()=>{flip=!flip;draw()};
-  $('sp').onclick=()=>speak(w[1]);
-  if(flip){$('again').onclick=()=>{q.push(q.shift());flip=false;draw()};$('know').onclick=()=>{q.shift();done++;flip=false;draw()}}else $('fl').onclick=()=>{flip=true;draw()};
- }
- draw();
-}
-function getMy(){try{return JSON.parse(store.get('my')||'[]')}catch(e){return[]}}
-function myWords(){const a=getMy();if(!a.length){app.innerHTML='<a class="back" href="#">🏠 На главную</a><h1>Мои слова</h1><div class="card">Пока пусто. Выдели слово в правилах или заданиях и нажми «➕ Добавить в практикум».</div>';return}cards({id:'my',words:a.map(w=>[w.r||'❓ '+w.t,w.t,w.c])})}
-const pop=document.createElement('div');pop.id='pop';pop.textContent='➕ Добавить в практикум';document.body.appendChild(pop);
-const toast=document.createElement('div');toast.id='toast';document.body.appendChild(toast);
-let cur=null,tm;
-function chk(){const s=getSelection(),t=s?s.toString().trim():'';const el=s&&s.anchorNode&&(s.anchorNode.nodeType===1?s.anchorNode:s.anchorNode.parentElement);if(!t||t.length>50||!el||!app.contains(el)||el.closest('textarea,input,select,button,audio')){pop.style.display='none';return}
- const r=s.getRangeAt(0).getBoundingClientRect(),box=el.closest('.card,.r,.tip,td,p')||el;cur={t,c:box.textContent.replace(/\s+/g,' ').trim().slice(0,140)};
- pop.style.display='block';const w=pop.offsetWidth;pop.style.top=(r.bottom+scrollY+10)+'px';pop.style.left=Math.min(Math.max(8,r.left+scrollX+r.width/2-w/2),innerWidth-w-8)+'px'}
-addEventListener('selectionchange',()=>{clearTimeout(tm);tm=setTimeout(chk,250)});
-pop.onclick=()=>{if(!cur)return;openModal(cur);pop.style.display='none';try{getSelection().removeAllRanges()}catch(e){}cur=null};
-function dict(t){const k=norm(t);for(const l of L)for(const w of l.words||[]){if(norm(w[1])===k)return w[0];if(norm(w[0])===k)return w[1]}return''}
-function openModal(c){
- const cy=/[а-яё]/i.test(c.t);
- const ov=document.createElement('div');ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40;display:flex;align-items:center;justify-content:center;padding:18px';
- ov.innerHTML=`<div class="card" style="width:100%;max-width:420px;margin:0"><div class="q">Новая карточка</div><label class="sub">Испанский</label><input type="text" id="mes" autocapitalize="none"><label class="sub" style="display:block;margin-top:10px">Русский перевод</label><input type="text" id="mru"><div class="fb" id="mst"></div><div class="two"><button class="btn" id="mx" style="background:var(--card);color:var(--tx)">Отмена</button><button class="btn" id="ms">Сохранить в карточки</button></div></div>`;
- document.body.appendChild(ov);
- const es=ov.querySelector('#mes'),ru=ov.querySelector('#mru'),st=ov.querySelector('#mst');
- (cy?ru:es).value=c.t;const tgt=cy?es:ru,known=dict(c.t);
- if(known){tgt.value=known;st.textContent='Найдено в словаре урока — можно поправить'}
- else{st.textContent='Перевожу…';(async()=>{try{const s=await window.claude.use('sample');if(!s)throw 0;const r=await s(`Переведи ${cy?'с русского на испанский':'с испанского на русский'} фрагмент учебного текста (уровень A2). Фрагмент: «${c.t}». Контекст: «${c.c}». Ответь только переводом, без пояснений и кавычек.`,{modelTier:'quick'});if(!tgt.value)tgt.value=r.text.trim().replace(/^["«]|["»]$/g,'');st.textContent='Перевод найден автоматически — можно поправить'}catch(e){st.textContent='Автоперевод недоступен — введи перевод вручную'}})()}
- ov.querySelector('#mx').onclick=()=>ov.remove();
- ov.querySelector('#ms').onclick=()=>{const e=es.value.trim(),r=ru.value.trim();if(!e||!r){st.textContent='Заполни оба поля';return}
-  const a=getMy().filter(x=>x.t.toLowerCase()!==e.toLowerCase());a.push({t:e,r,c:c.c});store.set('my',JSON.stringify(a));
-  toast.textContent='Слово добавлено в карточки! ✅';toast.style.display='block';setTimeout(()=>toast.style.display='none',1800);ov.remove()}
-}
-function home(hw){
- app.innerHTML='<h1>Español A2</h1><p class="sub">Твоя академия — выбери тему</p>'+L.map(l=>{
-  const s=store.get('st'+l.id);
-  const t=tag(l.id);
-  return `<div class="card"><div class="lesson"><b>Занятие №${l.id}: ${l.title}</b><span class="sub">${l.topic}</span>${t}</div><div class="two"><a class="btn" href="#l${l.id}">📖 Правила</a><a class="btn" href="#h${l.id}">✏️ Выполнить задание</a>${l.words?`<a class="btn w" href="#w${l.id}">🗂 Учить слова</a>`:''}</div></div>`}).join('')+`<div class="card"><div class="lesson"><b>⭐ Мои сохранённые слова</b><span class="sub">Слова, добавленные выделением (${getMy().length})</span></div><div class="two"><a class="btn w" href="#my">🗂 Учить мои слова</a></div></div>`;
-}
-function lesson(l,hw){if(!hw){theory(l);return}
- let err=0;
- let h=`<a class="back" href="#">🏠 На главную</a><h1>ДЗ к занятию №${l.id}</h1><p class="sub">${l.title} — ${l.topic}</p>`;
- h+='<p>'+tag(l.id)+'</p>';
- const parts=l.story.text.split(/\{(\d+)\}/);
- h+='<h2>'+(l.story.title||'1. Подстановка')+'</h2><div class="card story">'+parts.map((p,i)=>i%2?`<select data-g="${p}"><option value="">…</option>${l.story.gaps[p].map((o,j)=>`<option value="${j}">${o}</option>`).join('')}</select>`:esc(p)).join('')+'<div class="fb" id="sfb"></div></div>';
- h+=(l.quiz.length?'<h2>2. Тест</h2>':'')+l.quiz.map((q,i)=>`<div class="card" data-q="${i}"><div class="q">${esc(q.q)}</div><div class="opts">${q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${o}</button>`).join('')}</div><div class="fb"></div></div>`).join('');
- if(l.transform)h+='<div class="card"><div class="q">Преобразуй: desde hace → Hace… que</div></div>'+l.transform.map((t,i)=>`<div class="card" data-t="${i}"><div class="q">${esc(t.prompt)}</div><input type="text" autocapitalize="none" autocomplete="off" placeholder="Hace… que…"><button class="btn">Проверить</button><div class="fb"></div></div>`).join('');
- h+='<h2>3. Рефлексия</h2>'+l.survey.map((q,i)=>`<div class="card"><div class="q">${esc(q)}</div><textarea rows="2" data-s="${i}" placeholder="Escribe aquí…"></textarea><button class="btn rec" style="margin-top:8px">🎙 Записать</button><audio controls hidden style="width:100%;margin-top:8px"></audio></div>`).join('');
- h+='<button class="btn" id="fin" style="width:100%">Завершить ДЗ</button><div class="fb" id="finfb"></div>';
- app.innerHTML=h;
- app.querySelectorAll('select').forEach(s=>s.onchange=()=>{
-  if(s.value==='')return;const g=s.dataset.g,ok=+s.value===l.story.answers[g],sel=[...app.querySelectorAll('select')],fb=document.getElementById('sfb');s.className=ok?'ok':'bad';fb.textContent=ok?'':'💡 '+((l.story.hints||[])[g]||'Попробуй другой вариант.');if(!ok)err++;if(l.story.autoDone&&sel.every(x=>x.value!=='')){const all=sel.every(x=>+x.value===l.story.answers[x.dataset.g]);store.set('st'+l.id,all?'done':'rep');if(all)fb.textContent='🎉 Все 6 ответов верны — занятие завершено!'}});
- app.querySelectorAll('[data-q]').forEach(c=>{const q=l.quiz[c.dataset.q];c.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
-  if(c.dataset.done)return;const ok=+b.dataset.j===q.a;b.classList.add(ok?'ok':'bad');
-  if(ok){c.dataset.done=1}else err++;
-  c.querySelector('.fb').textContent=(ok?'✓ Верно! ':'✗ Попробуй ещё. ')+(ok?q.why:'')})});
- app.querySelectorAll('[data-t]').forEach(c=>{const t=l.transform[c.dataset.t];const inp=c.querySelector('input');
-  c.querySelector('.btn').onclick=()=>{const ok=t.answers.includes(norm(inp.value));inp.className=ok?'ok':'bad';if(!ok)err++;
-  c.querySelector('.fb').textContent=ok?'✓ Верно! '+t.why:'✗ Не совсем. '+t.why}});
- app.querySelectorAll('textarea').forEach(a=>{const k='sv'+l.id+a.dataset.s;a.value=store.get(k)||'';a.oninput=()=>store.set(k,a.value)});
- rec();document.getElementById('fin').onclick=()=>{store.set('st'+l.id,err?'rep':'done');
-  document.getElementById('finfb').textContent=err?`Ошибок: ${err}. Занятие отправлено на повторение.`:'Отлично! Занятие пройдено без ошибок.'};
-}
-function route(){const hh=location.hash,m=hh.match(/^#([lhw])(\d+)$/),l=m&&L.find(x=>x.id===m[2]);hh==='#my'?myWords():l?(m[1]==='w'&&l.words?cards(l):lesson(l,m[1]==='h')):home(hh==='#hw');pop.style.display='none';window.scrollTo(0,0)}
-addEventListener('hashchange',route);route();
+    let currentStep = 0;
+    const totalSteps = 4;
+
+    function selectOption(button, answer) {
+        const card = button.closest('.question-card');
+        const correctAnswer = card.getAttribute('data-correct');
+        const buttons = card.querySelectorAll('.option-btn');
+
+        buttons.forEach(btn => btn.classList.remove('selected', 'correct', 'incorrect'));
+
+        if (answer === correctAnswer) {
+            button.classList.add('correct');
+        } else {
+            button.classList.add('incorrect');
+            // Подсветим правильный для помощи
+            buttons.forEach(btn => {
+                if (btn.textContent.trim() === correctAnswer) {
+                    btn.classList.add('correct');
+                }
+            });
+        }
+    }
+
+    function changeStep(direction) {
+        const steps = document.querySelectorAll('.step-content');
+        steps[currentStep].classList.remove('active');
+
+        currentStep += direction;
+
+        if (currentStep < 0) currentStep = 0;
+        if (currentStep >= totalSteps) currentStep = totalSteps - 1;
+
+        steps[currentStep].classList.add('active');
+
+        document.getElementById('step-indicator').textContent = `Шаг ${currentStep + 1} из ${totalSteps}`;
+        document.getElementById('prev-btn').disabled = currentStep === 0;
+        
+        const nextBtn = document.getElementById('next-btn');
+        if (currentStep === totalSteps - 1) {
+            nextBtn.textContent = 'Завершить ДЗ';
+        } else {
+            nextBtn.textContent = 'Далее';
+        }
+    }
 </script>
+
 </body>
 </html>
